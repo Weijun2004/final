@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>要不要進我的妙妙屋</title>
+    <style>
+        body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+    }
+    .hidden-video {
+        display: none;
+    }
+    #playButton {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 20px;
+    }
+    img {
+        width: 300px;
+        height: auto;
+    }
+    .video-container {
+        display: inline-block;
+        width: 50%;
+    }
+    .content {
+        display: flex;
+        align-items: center;
+    }
+    .info {
+        padding: 20px;
+        background: linear-gradient(to bottom, #000000, #FF0000, #FFFF00);
+        color: white;
+        margin-top: 20px;
+    }
+    .info h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .info .lighter {
+        opacity: 0.8;
+    }
+    .info ul {
+        margin-top: 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Mickey_Mouse.svg/800px-Mickey_Mouse.svg.png" alt="Mickey Mouse" />
+        <button id="playButton">播放音樂</button>
+        <div class="video-container">
+            <iframe id="backgroundMusic" class="hidden-video"
+                    src="https://www.youtube.com/embed/YjqYIQAu7C4?autoplay=1&mute=0&controls=0&loop=0&playlist=YjqYIQAu7C4&rel=0&showinfo=0&modestbranding=1"
+                    width="400" height="225" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="info">
+        <h1><font color="96999A"><strong><font size="6">Mickey Mouse</font><br></strong></font></h1>
+        <p><span class="lighter"><font size="4">米奇老鼠，簡稱「米老鼠」，是一個由華特·迪士尼和烏布·伊沃克斯於華特迪士尼動畫工作室創作的卡通形象人物。</font><br></span></p>
+        <p><font size="4">於1928年11月18日在電影《汽船威利號》上首次正式亮相。</font><br></p>
+        <p><font size="4">米奇是一隻擬人化的黑色大耳老鼠，通常穿著紅色短褲、黃色大鞋和四根手指的白色手套，作為華特迪士尼公司的官方吉祥物。</font><br></p>
+        <p><font size="4">總共有九個米奇的卡通被提名奧斯卡最佳動畫短片獎。</font><br></p>
+        <p><font size="4">此外，迪士尼更於1932年獲頒榮譽奧斯卡獎，以褒揚其創作米奇的工作。</font><br></p>
+        <h3><strong><font size="5">有出現之電視節目</font><br></strong></h3>
+        <ul>
+            <li><font size="4">米老鼠俱樂部（1955年－2018年，節目曾多次更名）</font><br></li>
+            <li><font size="4">米老鼠新傳（1999年－2000年）</font><br></li>
+            <li><font size="4">米老鼠群星會（2001年－2003年）</font><br></li>
+            <li><font size="4">米奇妙妙屋（2006年－2016年）</font><br></li>
+            <li><font size="4">米奇歡樂多（2013年－2019年)</font><br></li>
+            <li><font size="4">米奇妙妙車玩轉冒險（2017年－2021年）</font><br></li>
+            <li><font size="4">米奇妙妙世界（2020年－2023年）</font><br></li>
+            <li><font size="4">米奇歡樂屋（2021年－至今）</font><br></li>
+        </ul>
+        <h4><strong><font size="4">參考資料</font><br></strong></h4>
+        <p>https://zh.wikipedia.org/zh-tw/%E7%B1%B3%E8%80%81%E9%BC%A0</p>
+    </div>
+
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+            var iframe = document.getElementById('backgroundMusic');
+            iframe.classList.remove('hidden-video');
+            iframe.src += "&autoplay=1";
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
